@@ -80,17 +80,3 @@ if __name__ == '__main__':
     filtered_data = filter_raw_data(raw_data)
     ride_schedule(filtered_data)
 
-# print("found duplicated records in the give data frame : ", df.duplicated().sum())
-# print(df.loc[df.duplicated()])
-# df = df[['First_Name', 'Last_Name']]
-# df.isna().sum()
-# df.duplicated.sum()
-# filter_data = users_data['Name'].str.extract(r'(^\w* \w*|^\w*)', expand=False)
-# coppell_data = users_data[(users_data['Location'].str.contains('|'.join(locations), regex=True, case=False))]
-# data[~data.Name.str.contains(r'[^a-zA-Z ]')]
-# final_data = filter_raw_data(users[(users['Gender'].str.lower() == 'm') &
-#                                    (users['Driver_License'].str.lower() == 'y')])
-# print(raw_data)
-# users_data = filter_raw_data(raw_data)
-# print(users_data.head())
-# ride_schedule(users_data)
