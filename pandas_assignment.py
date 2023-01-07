@@ -28,7 +28,7 @@ def filter_raw_data(df):
     return df
 
 '''
-This function 
+a new data frame will be created with the require information
 '''
 def ride_schedule(data):
     temp_dic = {'Coppell': data[data['Location'] == 'Coppell']['Name'].tolist(),
@@ -54,7 +54,9 @@ def list_of_names(li, n):
     return new_list
 '''
 
-
+'''
+assign rides to people on random days
+'''
 def list_of_names(li, n):
     new_list = []
     for i in range(n):
@@ -63,7 +65,9 @@ def list_of_names(li, n):
         new_list.append(li[i % len(li)])
     return new_list
 
-
+'''
+Generate all the dates of the current month
+'''
 def get_date():
     month = datetime.now().month
     year = datetime.now().year
@@ -73,7 +77,6 @@ def get_date():
     delta = last_date - first_date
 
     return [(first_date + timedelta(i)).strftime('%m/%d/%y') for i in range(delta.days + 1)]
-
 
 if __name__ == '__main__':
     raw_data = pd.read_csv('employee.csv')
